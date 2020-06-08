@@ -7,7 +7,8 @@
 ❗ Bitte erst ganz durchlesen ❗
 
 Die Idee dieser Aufgabe ist es eine kleine [CLI](https://de.wikipedia.org/wiki/Kommandozeile) Live-Wetter-App zu entwickeln, in die man über die Konsole Orte eintragen/entfernen kann und über einen Befehl alle Wetterdaten der eingetragenen Orte angezeigt bekommt.
-Falls ihr eine andere Idee habt, wie man Live-Wetter-Daten verarbeiten könnte tobt euch gerne aus.
+
+Falls ihr eine andere Idee habt, wie man Live-Wetter-Daten verarbeiten kann, könnt ihr diese auch umsetzen
 
 Um an die Live Wetterdaten zu kommen habe ich euch eine kleine Java-Bibliothek der Online-Schnittstelle [Weatherstack](https://weatherstack.com/) gebaut und in dieses GitHub Repository eingefügt. Ihr müsst also nur dieses Repo in Eclipse importieren und könnt damit arbeiten. In der ```Application``` Klasse habe ich euch einen Bespiel-Code eingefügt.
 
