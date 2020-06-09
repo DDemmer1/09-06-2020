@@ -1,27 +1,47 @@
 package de.uni.koeln;
 
-import de.demmer.dennis.weatherstack.WeatherStack;
-import de.demmer.dennis.weatherstack.exception.WeatherStackApiException;
+import java.util.List;
+import java.util.Scanner;
+
 import de.demmer.dennis.weatherstack.model.Weather;
+
 
 public class Application {
 
 	public static void main(String[] args) {
-		try {
-			String apiKey = "your_weatherstack_api_key_here";
-			WeatherStack weatherStack = new WeatherStack(apiKey);
-			Weather weather = weatherStack.getWeatherFromLocation("Cologne");
+
+		Scanner scanner = new Scanner(System.in);
+		
+		Weatherstation weatherstation = new Weatherstation();
+
+		loop: while (true) {
+
+			String input = scanner.next();
+
+			switch (input) {
 			
+			case "add":
+				weatherstation.addLocation(input);
+				System.out.println(input + " wurde hinzugefügt!");
+				break;
+			case "exit":
+				System.out.println("Programm wird beendet!");
+				break loop;
+			case "show":
+				List<Weather> weatherList = weatherstation.getAllWeather();
+				
+				for (Weather weather : weatherList) {
+					System.out.println("Ort: " + weather.getLocation().getName());
+					System.out.println("Temperatur: " + weather.getTemperature());
+				}
+				
+			// ...
+			default:
+				break;
+			}
 
-			System.out.println(weather);
-			System.out.println(weather.getLocation().getCountry());
-			System.out.println(weather.getLocation().getRegion());
-			System.out.println(weather.getTemperature());
-			System.out.println(weather.getWindSpeed());
-
-		} catch (WeatherStackApiException weatherStackApiException) {
-			weatherStackApiException.printStackTrace();
 		}
+
 	}
 
 }
