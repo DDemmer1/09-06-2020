@@ -1,6 +1,14 @@
 # 09-06-2020
 
-Übungsaufgabe vom 08.06.2020 für die Studierenden des Java II Seminars der Universität zu Köln
+Übungsaufgabe vom 09.06.2020 und 23.06.2020  für die Studierenden des Java II Seminars der Universität zu Köln
+
+
+### 📝 Aufgabe-GUI:
+
+Baut aus eurem Wetterstation-CLI eine Swing-GUI. Das könnte ungefähr so aussehen.
+![GUI](gui.png)
+
+
 
 ### 📝 Aufgabe:
 
@@ -18,6 +26,7 @@ Den Inhalt der Datenklasse ```Weather``` könnt ihr euch [hier](https://github.c
 ❗ Die Nutzung von Weatherstack ist in der Kostenlosen Variante auf 1000-Anfragen pro Monat begrenzt und wird durch einen sogenannten API-key kontrolliert (in meiner E-Mail an euch findet ihr meinen API-Key, den ihr gerne verwenden dürft).  Verwendet die Methode ```getWeatherFromLocation(String location)``` also am besten sparsam. Falls ihr feststellt, dass der Key aus der E-Mail aufgebraucht wurde, könnt ihr euch auch ganz einfach einen kostenlosen Account unter https://weatherstack.com/product machen und bekommt dann euren eigenen Key mit 1000 freien Anfragen.
 
 Eine WetterVORHERSAGE ist leider mit einem Kostenlosen Zugang nicht möglich.
+
 
     
 ### ℹ️ Resourcen:
