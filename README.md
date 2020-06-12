@@ -10,7 +10,7 @@ Baut aus eurem Wetterstation-CLI eine Swing-GUI. Das könnte ungefähr so ausseh
 
 
 
-### 📝 Aufgabe:
+### 📝 Aufgabe-CLI:
 
 ❗ Bitte erst ganz durchlesen ❗
 
