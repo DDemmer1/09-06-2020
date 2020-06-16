@@ -1,47 +1,31 @@
 package de.uni.koeln;
 
-import java.util.List;
-import java.util.Scanner;
 
-import de.demmer.dennis.weatherstack.model.Weather;
+import java.awt.EventQueue;
 
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
+import de.uni.koeln.gui.WeatherstationGUI;
 
 public class Application {
 
 	public static void main(String[] args) {
-
-		Scanner scanner = new Scanner(System.in);
 		
-		Weatherstation weatherstation = new Weatherstation();
-
-		loop: while (true) {
-
-			String input = scanner.next();
-
-			switch (input) {
+		
+		EventQueue.invokeLater(new Runnable() {
 			
-			case "add":
-				weatherstation.addLocation(input);
-				System.out.println(input + " wurde hinzugefügt!");
-				break;
-			case "exit":
-				System.out.println("Programm wird beendet!");
-				break loop;
-			case "show":
-				List<Weather> weatherList = weatherstation.getAllWeather();
-				
-				for (Weather weather : weatherList) {
-					System.out.println("Ort: " + weather.getLocation().getName());
-					System.out.println("Temperatur: " + weather.getTemperature());
-				}
-				
-			// ...
-			default:
-				break;
+			@Override
+			public void run() {
+				try {
+					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+					WeatherstationGUI gui = new WeatherstationGUI("Cologne");
+				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+						| UnsupportedLookAndFeelException e) {
+					e.printStackTrace();
+				} 
 			}
-
-		}
-
+		});
 	}
 
 }
